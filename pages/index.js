@@ -1,4 +1,3 @@
-import "../styles/Home.module.css";
 import { Slide } from "react-reveal";
 import Link from "next/link";
 
