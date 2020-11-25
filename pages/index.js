@@ -13,9 +13,9 @@ export default function Home() {
               Web Dev , App Dev , UI Designer <br /> & Student !
             </span>
             <div className="btn-holder">
-              <Link href="/projects">
+              {/* <Link href="/projects">
                 <button>View Projects</button>
-              </Link>
+              </Link> */}
               <Link href="/profile">
                 <button className="secondary-btn">View Profile</button>
               </Link>
