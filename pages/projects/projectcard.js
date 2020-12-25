@@ -1,20 +1,16 @@
-import { FaGithub } from "react-icons/fa";
+import Axios from "axios";
+import { useEffect, useState } from "react";
 
 export default function ProjectCard(props) {
+  const getData = () => {
+    let temp = [];
+    Axios.get("./api/projects").then((res) => {
+      temp = res.data;
+    });
+    return temp;
+  };
+
   return (
-    <>
-      <div className="project-card">
-        <h3>Project name</h3>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
-          dolor atque, expedita dignissimos distinctio in sed optio autem,
-        </p>
-        <p>lang</p>
-        <a href="" className="repo_btn">
-          <FaGithub size="20px" />
-          &nbsp;<span>View Repo</span>
-        </a>
-      </div>
-    </>
+    <>{getData().length == 0 ? <ProjectCard></ProjectCard> : <p>loading</p>}</>
   );
 }
