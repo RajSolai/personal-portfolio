@@ -10,7 +10,8 @@ export default function Home() {
             <p className="msg">Hi , am</p>
             <p className="name">Solai Raj</p>
             <span>
-              Web Dev , App Dev , UI Designer <br /> & Student !
+              Student , Web & Mobile Developer ,<br /> IoT enthusiast (AI + IoT)
+              , Linux Guy
             </span>
             <div className="btn-holder">
               <Link href="/projects">

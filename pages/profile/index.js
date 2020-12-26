@@ -9,7 +9,6 @@ import {
   FaDribbble,
   FaWhatsapp,
   FaFacebook,
-  FaGoogle,
 } from "react-icons/fa";
 import { RiFlutterLine } from "react-icons/ri";
 import { IoLogoIonic, IoIosArrowBack } from "react-icons/io";
@@ -17,35 +16,35 @@ import { MdMailOutline } from "react-icons/md";
 import Link from "next/link";
 import { Fade } from "react-reveal";
 
-const navigate = (domain) => {
-  let temp = "";
-  switch (domain) {
-    case "github":
-      location.href = "https://github.com/RajSolai";
-      break;
-    case "gmail":
-      location.href = "mailto:msraj085@gmail.com";
-      break;
-    case "wa":
-      location.href =
-        "https://wa.me/918428732579?text=Hey Contact from your solairaj.rocks";
-      break;
-    case "insta":
-      location.href = "https://instagram.com/rajsolai.085";
-      break;
-    case "insta":
-      location.href = "https://https://dribbble.com/msraj085";
-      break;
-    case "fb":
-      location.href = "https://www.facebook.com/msraj.085/";
-      break;
-    default:
-      location.href = "./projects";
-      break;
-  }
-};
-
 export default function profile() {
+  const navigate = (domain) => {
+    let temp = "";
+    switch (domain) {
+      case "github":
+        temp = "https://github.com/RajSolai";
+        break;
+      case "gmail":
+        temp = "mailto:msraj085@gmail.com";
+        break;
+      case "wa":
+        temp =
+          "https://wa.me/918428732579?text=Hey Contact from your solairaj.rocks";
+        break;
+      case "insta":
+        temp = "https://www.instagram.com/raj.solai085/";
+        break;
+      case "insta":
+        temp = "https://https://dribbble.com/msraj085";
+        break;
+      case "fb":
+        temp = "https://www.facebook.com/msraj.085/";
+        break;
+      default:
+        temp = "./projects";
+        break;
+    }
+    return temp;
+  };
   return (
     <div className="profile">
       <Fade left>
@@ -53,7 +52,7 @@ export default function profile() {
           <Link href="/">
             <IoIosArrowBack />
           </Link>
-          <p>My Profile</p>
+          <p>My Projects</p>
         </span>
       </Fade>
       <Fade right>
@@ -114,32 +113,50 @@ export default function profile() {
       </div>
       <div className="contacts">
         <Fade bottom duration={1000}>
-          <div className="contact-card github" onClick={navigate(github)}>
+          <div
+            className="contact-card github"
+            onClick={() => window.location.replace(navigate("github"))}
+          >
             <FaGithub className="contact-icon" />
           </div>
         </Fade>
         <Fade bottom duration={1250}>
-          <div className="contact-card gmail" onClick={navigate(github)}>
+          <div
+            className="contact-card gmail"
+            onClick={() => window.location.replace(navigate("gmail"))}
+          >
             <MdMailOutline className="contact-icon" />
           </div>
         </Fade>
         <Fade bottom duration={1500}>
-          <div className="contact-card wa" onClick={navigate(github)}>
+          <div
+            className="contact-card wa"
+            onClick={() => window.location.replace(navigate("wa"))}
+          >
             <FaWhatsapp className="contact-icon" />
           </div>
         </Fade>
         <Fade bottom duration={2000}>
-          <div className="contact-card dribble" onClick={navigate(github)}>
+          <div
+            className="contact-card dribble"
+            onClick={() => window.location.replace(navigate("dribble"))}
+          >
             <FaDribbble className="contact-icon" />
           </div>
         </Fade>
         <Fade bottom duration={2250}>
-          <div className="contact-card insta" onClick={navigate(github)}>
+          <div
+            className="contact-card insta"
+            onClick={() => window.location.replace(navigate("insta"))}
+          >
             <FaInstagram className="contact-icon" />
           </div>{" "}
         </Fade>
         <Fade bottom duration={2500}>
-          <div className="contact-card fb" onClick={navigate(github)}>
+          <div
+            className="contact-card fb"
+            onClick={() => window.location.replace(navigate("fb"))}
+          >
             <FaFacebook className="contact-icon" />
           </div>
         </Fade>
