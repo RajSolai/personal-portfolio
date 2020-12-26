@@ -1,5 +1,4 @@
-import Axios from "axios";
-import { useEffect, useState } from "react";
+import { FaGithub } from "react-icons/fa";
 
 export default function ProjectCard(props) {
   const getData = () => {
@@ -11,6 +10,14 @@ export default function ProjectCard(props) {
   };
 
   return (
-    <>{getData().length == 0 ? <ProjectCard></ProjectCard> : <p>loading</p>}</>
+    <div className="project-card">
+      <h3>{props.name}</h3>
+      <p>{props.desc}</p>
+      <p>{props.lang}</p>
+      <a href={props.link} className="repo_btn">
+        <FaGithub />
+        &nbsp;View Repo
+      </a>
+    </div>
   );
 }

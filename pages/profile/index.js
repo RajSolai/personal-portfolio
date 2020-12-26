@@ -17,6 +17,34 @@ import { MdMailOutline } from "react-icons/md";
 import Link from "next/link";
 import { Fade } from "react-reveal";
 
+const navigate = (domain) => {
+  let temp = "";
+  switch (domain) {
+    case "github":
+      location.href = "https://github.com/RajSolai";
+      break;
+    case "gmail":
+      location.href = "mailto:msraj085@gmail.com";
+      break;
+    case "wa":
+      location.href =
+        "https://wa.me/918428732579?text=Hey Contact from your solairaj.rocks";
+      break;
+    case "insta":
+      location.href = "https://instagram.com/rajsolai.085";
+      break;
+    case "insta":
+      location.href = "https://https://dribbble.com/msraj085";
+      break;
+    case "fb":
+      location.href = "https://www.facebook.com/msraj.085/";
+      break;
+    default:
+      location.href = "./projects";
+      break;
+  }
+};
+
 export default function profile() {
   return (
     <div className="profile">
@@ -86,32 +114,32 @@ export default function profile() {
       </div>
       <div className="contacts">
         <Fade bottom duration={1000}>
-          <div className="contact-card github">
+          <div className="contact-card github" onClick={navigate(github)}>
             <FaGithub className="contact-icon" />
           </div>
         </Fade>
         <Fade bottom duration={1250}>
-          <div className="contact-card gmail">
+          <div className="contact-card gmail" onClick={navigate(github)}>
             <MdMailOutline className="contact-icon" />
           </div>
         </Fade>
         <Fade bottom duration={1500}>
-          <div className="contact-card wa">
+          <div className="contact-card wa" onClick={navigate(github)}>
             <FaWhatsapp className="contact-icon" />
           </div>
         </Fade>
         <Fade bottom duration={2000}>
-          <div className="contact-card dribble">
+          <div className="contact-card dribble" onClick={navigate(github)}>
             <FaDribbble className="contact-icon" />
           </div>
         </Fade>
         <Fade bottom duration={2250}>
-          <div className="contact-card insta">
+          <div className="contact-card insta" onClick={navigate(github)}>
             <FaInstagram className="contact-icon" />
           </div>{" "}
         </Fade>
         <Fade bottom duration={2500}>
-          <div className="contact-card fb">
+          <div className="contact-card fb" onClick={navigate(github)}>
             <FaFacebook className="contact-icon" />
           </div>
         </Fade>
