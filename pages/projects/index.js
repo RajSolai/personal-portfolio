@@ -4,7 +4,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { IoIosArrowBack } from "react-icons/io";
 import ProjectCard from "./projectcard";
-import { data } from "./projectsdata";
+import { data } from "../../data/projectsdata";
 
 export default function project() {
   return (
