@@ -1,5 +1,6 @@
 export let data = [
   {
+    searchkey: "flutter",
     projectname: "Lendbook",
     projectdesc:
       "App where the users can lend their books for free to someone who's in need.",
@@ -7,12 +8,14 @@ export let data = [
     porjectlink: "https://github.com/RajSolai/lendbook-app",
   },
   {
+    searchkey: "gtk",
     projectname: "Lroton",
     projectdesc: "Protonvpn GTK App for elementary OS (Linux).",
     projectlang: "vala , gtk3",
     porjectlink: "https://github.com/RajSolai/lroton",
   },
   {
+    searchkey: "fweb",
     projectname: "Crime Records",
     projectdesc:
       "Angular + Ionic PWA to view the Crime Records of different (indian) states and of different categories.",
@@ -20,6 +23,7 @@ export let data = [
     porjectlink: "https://github.com/RajSolai/CrimeRecords",
   },
   {
+    searchkey: "ionic",
     projectname: "Cake Days",
     projectdesc:
       "Simple birthday storing and retriving ( C R functions) using Angular,Ionic,Firebase.",
@@ -27,6 +31,7 @@ export let data = [
     porjectlink: "https://github.com/RajSolai/Cake-Day-App",
   },
   {
+    searchkey: "flutter",
     projectname: "Flutter News",
     projectdesc: "Simple news app with quite features created using flutter",
     projectlang: "dart , flutter",

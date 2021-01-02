@@ -21,6 +21,7 @@
   cursor: hand;
 }
 button {
+  outline: none !important;
   color: #ffffff;
   border: 2px solid #53372d;
   font-family: "Montserrat", sans-serif;
@@ -178,7 +179,22 @@ button:hover {
   flex-direction: row;
   flex-wrap: wrap;
 }
-
+.project-categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+.category-btn {
+  border-radius: 12px;
+  background-color: var(--brown);
+  color: #ffffff;
+}
+.category-btn-active {
+  background-color: #ffffff;
+  color: var(--brown);
+}
 .repo_btn {
   color: #fafafa;
   background-color: #333333;
