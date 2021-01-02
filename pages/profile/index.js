@@ -57,7 +57,7 @@ export default function profile() {
             <Link href="/">
               <IoIosArrowBack />
             </Link>
-            <p>My Projects</p>
+            <p>My Profile</p>
           </span>
         </Fade>
         <Fade right>
