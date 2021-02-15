@@ -19,10 +19,14 @@ export default function project() {
     }
     setprevtarget(event.target);
     event.target.className += " category-btn-active";
-    const filteredData = data.filter(
-      (_data) => _data.searchkey == event.target.id
-    );
-    settheprojects(filteredData);
+    if (event.target.id) {
+      const filteredData = data.filter(
+        (_data) => _data.searchkey == event.target.id
+      );
+      settheprojects(filteredData);
+    } else {
+      settheprojects(data);
+    }
   };
   return (
     <>
@@ -39,6 +43,11 @@ export default function project() {
           </span>
         </Fade>
         <div className="project-categories">
+          <Fade top>
+            <button className="category-btn" onClick={changeCategory}>
+              All projects
+            </button>
+          </Fade>
           <Fade top>
             <button
               className="category-btn"
