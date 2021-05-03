@@ -13,6 +13,7 @@ import {
 import { RiFlutterLine } from "react-icons/ri";
 import { IoLogoIonic, IoIosArrowBack } from "react-icons/io";
 import { MdMailOutline } from "react-icons/md";
+import { SiRedux } from "react-icons/si";
 import Link from "next/link";
 import Head from "next/head";
 import { Fade } from "react-reveal";
@@ -86,30 +87,36 @@ export default function profile() {
             </span>
           </Fade>
           <Fade top duration={1500}>
+            <span className="skillbox redux">
+              <SiRedux />
+             	Redux 
+            </span>
+          </Fade>
+          <Fade top duration={2000}>
             <span className="skillbox node">
               <FaNodeJs />
               NodeJS
             </span>
           </Fade>
-          <Fade top duration={2000}>
+          <Fade top duration={2500}>
             <span className="skillbox sql">
               <FaDatabase />
               NoSQL,SQL,MySQL
             </span>
           </Fade>
-          <Fade top duration={2500}>
+          <Fade top duration={3000}>
             <span className="skillbox html">
               <FaHtml5 />
               HTML+CSS+JS
             </span>
           </Fade>
-          <Fade top duration={3000}>
+          <Fade top duration={3500}>
             <span className="skillbox flutter">
               <RiFlutterLine />
               Flutter
             </span>
           </Fade>
-          <Fade top duration={3500}>
+          <Fade top duration={4000}>
             <span className="skillbox ionic">
               <IoLogoIonic />
               Ionic
