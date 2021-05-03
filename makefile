@@ -1,7 +1,10 @@
 # the CI makefile for integrating changes to 
 # deployment
 
-all: installdeps build upload
+all: installtools installdeps build upload
+
+installtools:
+	sudo apt install ncftp -y
 
 installdeps:
 	@echo 📦️ installing dependencies && \
