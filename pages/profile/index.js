@@ -101,7 +101,7 @@ export default function profile() {
           <Fade top duration={2500}>
             <span className="skillbox sql">
               <FaDatabase />
-              NoSQL,SQL,MySQL
+              NoSQL,MySQL
             </span>
           </Fade>
           <Fade top duration={3000}>
