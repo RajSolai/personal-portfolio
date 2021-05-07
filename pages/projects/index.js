@@ -6,12 +6,15 @@ import { IoIosArrowBack } from "react-icons/io";
 import ProjectCard from "./projectcard";
 import { data } from "../../data/projectsdata";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function project() {
   const [theprojects, settheprojects] = useState([]);
   const [theprevtarget, setprevtarget] = useState(null);
   useEffect(() => {
-    settheprojects(data);
+    axios.get("").then(res=>{
+      settheprojects(res.data);
+    });
   }, []);
   const changeCategory = (event) => {
     if (theprevtarget) {
