@@ -12,7 +12,7 @@ export default function project() {
   const [theprojects, settheprojects] = useState([]);
   const [theprevtarget, setprevtarget] = useState(null);
   useEffect(() => {
-    axios.get("").then(res=>{
+    axios.get("https://projects-api-servlet.herokuapp.com/projects").then(res=>{
       settheprojects(res.data);
     });
   }, []);
@@ -84,10 +84,10 @@ export default function project() {
               <Fade bottom delay={100 + 90 * key}>
                 <ProjectCard
                   key={key}
-                  name={_data.projectname}
-                  desc={_data.projectdesc}
-                  link={_data.porjectlink}
-                  lang={_data.projectlang}
+                  name={_data.title}
+                  desc={_data.desc}
+                  link={_data.url}
+                  lang={_data.langs}
                 />
               </Fade>
             ))
