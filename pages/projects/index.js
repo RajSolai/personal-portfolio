@@ -3,6 +3,7 @@ import { Fade } from "react-reveal";
 import Link from "next/link";
 import Head from "next/head";
 import { IoIosArrowBack } from "react-icons/io";
+import { MdAccountCircle } from "react-icons/md";
 import ProjectCard from "./projectcard";
 import { data } from "../../data/projectsdata";
 import { useEffect, useState } from "react";
@@ -38,11 +39,16 @@ export default function project() {
       </Head>
       <div className="projects">
         <Fade top>
-          <span className="titlewrap">
+          <span className="titlebar">
+            <div className="titlewrap">
             <Link href="/">
               <IoIosArrowBack />
             </Link>
             <p>My Profile</p>
+            </div>
+            <Link href="/adminlogin">
+              <MdAccountCircle />
+            </Link>
           </span>
         </Fade>
         <div className="project-categories">
