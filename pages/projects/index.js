@@ -5,7 +5,6 @@ import Head from "next/head";
 import { IoIosArrowBack } from "react-icons/io";
 import { MdAccountCircle } from "react-icons/md";
 import ProjectCard from "./projectcard";
-import { data } from "../../data/projectsdata";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
