@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Head from "next/head";
-import axios from "axios";
 
 const AddProject = () => {
   const router = useRouter();
@@ -46,7 +45,12 @@ const AddProject = () => {
               name="url"
               placeholder="Enter Url of Github !"
             />
-            
+            <input
+              className="project-entry"
+              type="text"
+              name="searchkey"
+              placeholder="flutter/gtk/fweb/ionic"
+            />
             <button type="submit" >
               Add Project
             </button>
