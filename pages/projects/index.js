@@ -47,7 +47,7 @@ export default function project() {
             <Link href="/">
               <IoIosArrowBack />
             </Link>
-            <p>My Profile</p>
+            <p>My Projects</p>
             </div>
             <Link href="/adminlogin">
               <MdAccountCircle />
