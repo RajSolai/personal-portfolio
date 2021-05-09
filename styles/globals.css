@@ -235,6 +235,17 @@ button:hover {
 .login-warp{
   margin-top: 30vh;
 }
+.addproject-form{
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+.project-entry{
+  margin: .65rem;
+}
+.addproject-warp{
+  margin-top: 20vh;
+}
 
 input{
   padding: .7rem;
