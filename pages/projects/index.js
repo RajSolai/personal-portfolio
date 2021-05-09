@@ -24,12 +24,12 @@ export default function project() {
     setprevtarget(event.target);
     event.target.className += " category-btn-active";
     if (event.target.id) {
-      const filteredData = data.filter(
+      const filteredData = theprojects.filter(
         (_data) => _data.searchkey == event.target.id
       );
       settheprojects(filteredData);
     } else {
-      settheprojects(data);
+      settheprojects(theprojects);
     }
   };
   return (
