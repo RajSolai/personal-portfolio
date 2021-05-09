@@ -6,9 +6,10 @@ const Admin = () => {
   const [secretKey, setSecretKey] = useState("");
   const router = useRouter();
   const makeLogin = () => {
-    console.log(secretKey);
-    localStorage.setItem("isLogged",true);
-    router.push("/addproject");
+    if(secretKey==="yp071lA3%Xp**t0c"){
+      localStorage.setItem("isLogged",true);
+      router.push("/addproject");
+    }
   }
   return (
     <>
