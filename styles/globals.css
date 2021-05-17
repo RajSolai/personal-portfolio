@@ -13,6 +13,13 @@
   font-weight: bold;
   cursor: hand;
 }
+.titlebar{
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: hand;
+}
 .titlewrap p {
   margin: 0;
   margin-left: 0.5rem;
@@ -212,6 +219,39 @@ button:hover {
 
 .redux {
   color: #764ABC;
+}
+
+.admin-login{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.login-form{
+  display: flex;
+  flex-direction: column;
+}
+.login-warp{
+  margin-top: 30vh;
+}
+.addproject-form{
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+.project-entry{
+  margin: .65rem;
+}
+.addproject-warp{
+  margin-top: 20vh;
+}
+
+input{
+  padding: .7rem;
+  border: 2px solid var(--brown);
+  border-radius: 8px;
+  outline: none;
 }
 
 /* pixel 2 */

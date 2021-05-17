@@ -3,15 +3,22 @@ import { Fade } from "react-reveal";
 import Link from "next/link";
 import Head from "next/head";
 import { IoIosArrowBack } from "react-icons/io";
+import { MdAccountCircle } from "react-icons/md";
 import ProjectCard from "./projectcard";
-import { data } from "../../data/projectsdata";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function project() {
   const [theprojects, settheprojects] = useState([]);
+  const [unaltered, setUnaltered] = useState([]);
+  const [isLoading, setLoading] = useState(true);
   const [theprevtarget, setprevtarget] = useState(null);
   useEffect(() => {
-    settheprojects(data);
+    axios.get("https://projects-api-servlet.herokuapp.com/projects").then(res=>{
+      settheprojects(res.data);
+      setUnaltered(res.data);
+      setLoading(false);
+    });
   }, []);
   const changeCategory = (event) => {
     if (theprevtarget) {
@@ -20,12 +27,12 @@ export default function project() {
     setprevtarget(event.target);
     event.target.className += " category-btn-active";
     if (event.target.id) {
-      const filteredData = data.filter(
+      const filteredData = unaltered.filter(
         (_data) => _data.searchkey == event.target.id
       );
       settheprojects(filteredData);
     } else {
-      settheprojects(data);
+      settheprojects(unaltered);
     }
   };
   return (
@@ -35,11 +42,16 @@ export default function project() {
       </Head>
       <div className="projects">
         <Fade top>
-          <span className="titlewrap">
+          <span className="titlebar">
+            <div className="titlewrap">
             <Link href="/">
               <IoIosArrowBack />
             </Link>
-            <p>My Profile</p>
+            <p>My Projects</p>
+            </div>
+            <Link href="/adminlogin">
+              <MdAccountCircle />
+            </Link>
           </span>
         </Fade>
         <div className="project-categories">
@@ -74,21 +86,28 @@ export default function project() {
           </Fade>
         </div>
         <div className="project-holder">
-          {theprojects.length == 0 ? (
-            <p>Oops, Nothing Found here !</p>
-          ) : (
-            theprojects.map((_data, key) => (
-              <Fade bottom delay={100 + 90 * key}>
-                <ProjectCard
-                  key={key}
-                  name={_data.projectname}
-                  desc={_data.projectdesc}
-                  link={_data.porjectlink}
-                  lang={_data.projectlang}
-                />
-              </Fade>
-            ))
-          )}
+          {
+            isLoading ? (
+              <p>Loading ...</p>
+            ) : (
+              theprojects.length == 0 ? (
+                <p>Oops, Nothing Found here !</p>
+              ) : (
+                theprojects.map((_data, key) => (
+                  <Fade bottom delay={100 + 90 * key}>
+                    <ProjectCard
+                      key={key}
+                      name={_data.title}
+                      desc={_data.desc}
+                      link={_data.url}
+                      lang={_data.langs}
+                    />
+                  </Fade>
+                ))
+              )    
+            )
+          }
+          
         </div>
       </div>
     </>
