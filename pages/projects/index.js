@@ -1,9 +1,7 @@
 //projects.js
-import { Fade } from "react-reveal";
 import Link from "next/link";
 import Head from "next/head";
 import { IoIosArrowBack } from "react-icons/io";
-import { MdAccountCircle } from "react-icons/md";
 import ProjectCard from "./projectcard";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -41,7 +39,6 @@ export default function project() {
         <title>Solai Raj - Projects</title>
       </Head>
       <div className="projects">
-        <Fade top>
           <span className="titlebar">
             <div className="titlewrap">
             <Link href="/">
@@ -50,14 +47,10 @@ export default function project() {
             <p>My Projects</p>
             </div>
           </span>
-        </Fade>
         <div className="project-categories">
-          <Fade top>
             <button className="category-btn" onClick={changeCategory}>
               All projects
             </button>
-          </Fade>
-          <Fade top>
             <button
               className="category-btn"
               id="flutter"
@@ -65,22 +58,15 @@ export default function project() {
             >
               Flutter Apps
             </button>
-          </Fade>
-          <Fade top>
             <button className="category-btn" id="gtk" onClick={changeCategory}>
               GTK Apps
             </button>
-          </Fade>
-          <Fade top>
             <button className="category-btn" id="apis" onClick={changeCategory}>
               Backend APIs
             </button>
-          </Fade>
-          <Fade top>
             <button className="category-btn" id="fweb" onClick={changeCategory}>
               Web Apps
             </button>
-          </Fade>
         </div>
         <div className="project-holder">
           {
@@ -91,7 +77,6 @@ export default function project() {
                 <p>Oops, Nothing Found here !</p>
               ) : (
                 theprojects.map((_data, key) => (
-                  <Fade bottom delay={100 + 90 * key}>
                     <ProjectCard
                       key={key}
                       name={_data.title}
@@ -99,7 +84,6 @@ export default function project() {
                       link={_data.url}
                       lang={_data.langs}
                     />
-                  </Fade>
                 ))
               )    
             )

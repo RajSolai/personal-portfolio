@@ -1,4 +1,4 @@
-import { Slide } from "react-reveal";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Head from "next/head";
 
@@ -8,9 +8,18 @@ export default function Home() {
       <Head>
         <title>Solai Raj</title>
       </Head>
-      <div className="home">
-        <div className="greetbox">
-          <Slide left>
+      <motion.div
+        initial={{
+          y: -20,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 100,
+        }}
+      >
+        <div className="home">
+          <div className="greetbox">
             <div className="greettext">
               <p className="msg"> &nbsp;Hi , am</p>
               <p className="name">Solai Raj</p>
@@ -27,14 +36,12 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-          </Slide>
-          <Slide right>
             <div className="greetimg">
               <img src="/mine.png" className="greetimg-img" alt="" />
             </div>
-          </Slide>
+          </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
