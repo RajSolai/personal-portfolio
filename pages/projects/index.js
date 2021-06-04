@@ -49,9 +49,6 @@ export default function project() {
             </Link>
             <p>My Projects</p>
             </div>
-            <Link href="/adminlogin">
-              <MdAccountCircle />
-            </Link>
           </span>
         </Fade>
         <div className="project-categories">
