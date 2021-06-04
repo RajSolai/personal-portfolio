@@ -1,3 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+:root {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  --green: #67663f;
+  --brown: #53372d;
+  color: var(--brown);
+}
+button {
+  outline: none !important;
+  color: #ffffff;
+  border: 2px solid #53372d;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background: var(--brown);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  transition: 300ms ease-in-out;
+}
+button:hover {
+  background: transparent;
+  color: var(--brown);
+}
+.titlewrap {
+  display: inline-flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: hand;
+}
 .greetbox {
   flex-direction: column-reverse;
   align-items: center;
@@ -70,4 +103,39 @@
 .contacts {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contact-card {
+  width: 3rem;
+  margin: 1rem;
+  margin-top: 1.5rem;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+.contact-icon {
+  height: 3rem;
+  width: 3rem;
+}
+.github {
+  color: #333333;
+}
+.insta {
+  color: #bc2a8d;
+}
+.gmail {
+  color: #d44638;
+}
+.dribble {
+  color: #ea4c89;
+}
+.wa {
+  color: #25d366;
+}
+.fb {
+  color: #4267b2;
 }
