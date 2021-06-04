@@ -12,7 +12,7 @@ export default function Home() {
         <div className="greetbox">
           <Slide left>
             <div className="greettext">
-              <p className="msg">Hi , am</p>
+              <p className="msg"> &nbsp;Hi , am</p>
               <p className="name">Solai Raj</p>
               <span>
                 Student , Web & Mobile Developer ,<br /> IoT enthusiast (AI +

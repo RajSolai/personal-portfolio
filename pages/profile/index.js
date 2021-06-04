@@ -65,17 +65,16 @@ export default function profile() {
           <div className="content">
             <p>
               Hey ! Am Solai Raj , Just a Student from SRM VALLIAIAMMAI
-              ENGINEERING COLLEGE ,<br /> Chennai Persuing my Under Graduate
+              ENGINEERING COLLEGE ,<wbr /> Chennai Persuing my Under Graduate
               Engineering Degree in{" "}
               <strong>Computer Science and Engineering</strong> ,
-              <br /> Am a great fan of computers and a quick learner , eager to
-              work on projects , Freelance Web and <br /> Mobile Application
+              <wbr /> Am a great fan of computers and a quick learner , eager to
+              work on projects , Freelance Web and <wbr /> Mobile Application
               Developer, Love to Constantly Update myself on every new Projects,
-              <br /> Guys, I can even Speak Japanese a little ,
+              <wbr /> Guys, I can even Speak Japanese a little ,
               こにちわおれわーともだち UwU
-              <br />
-              below are the skills of mine. ( Viewport is not enough for all of
-              my Skills :)
+              <wbr />
+              below are some skills of mine.
             </p>
           </div>
         </Fade>

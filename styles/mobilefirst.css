@@ -1,0 +1,73 @@
+.greetbox {
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.profile {
+  margin: 1rem;
+}
+.projects {
+  padding: 0rem;
+  margin: 1rem;
+}
+.project-holder {
+  padding: 0rem;
+  margin: 0rem;
+}
+.project-card {
+  margin: 1rem 0 0 0;
+  width: 320px !important;
+}
+.home {
+  margin-top: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.msg {
+  margin: 0;
+}
+.greetimg {
+  display: none;
+}
+.name {
+  font-size: 48px;
+  margin: 0.3rem;
+}
+.btn-holder {
+  margin-top: 1rem;
+}
+.contacts {
+  flex-wrap: wrap;
+}
+.skillbox {
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0.5rem;
+  font-weight: 500;
+}
+.content {
+  line-height: 22px;
+}
+.react {
+  color: #1267b7;
+}
+.node {
+  color: #59b312;
+}
+.sql {
+  color: #c5b100;
+}
+.html {
+  color: #f50d0d;
+}
+.flutter {
+  color: #1dd0e9;
+}
+.ionic {
+  color: #498aff;
+}
+.contacts {
+  display: flex;
+  flex-direction: row;
+}
