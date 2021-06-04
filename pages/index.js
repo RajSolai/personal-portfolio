@@ -10,12 +10,20 @@ export default function Home() {
       </Head>
       <motion.div
         initial={{
-          y: -20,
+          // y: -20,
           opacity: 0,
+          scaleX:0,
+          scaleY:0,
         }}
         animate={{
-          y: 0,
+          // y: 0,
           opacity: 100,
+          scaleX:1,
+          scaleY:1,
+        }}
+        transition={{
+          duration:1,
+          type:"spring",
         }}
       >
         <div className="home">

@@ -105,42 +105,156 @@ export default function profile() {
           </span>
         </div>
         <div className="contacts">
-          <div
-            className="contact-card github"
-            onClick={() => window.location.replace(navigate("github"))}
+          <motion.div
+            initial={{
+              // y: -20,
+              opacity: 0,
+              scaleX: 0,
+              scaleY: 0,
+            }}
+            animate={{
+              // y: 0,
+              opacity: 100,
+              scaleX: 1,
+              scaleY: 1,
+            }}
+            transition={{
+              duration: 1,
+              type: "spring",
+            }}
           >
-            <FaGithub className="contact-icon" />
-          </div>
-          <div
-            className="contact-card gmail"
-            onClick={() => window.location.replace(navigate("gmail"))}
+            <div
+              className="contact-card github"
+              onClick={() => window.location.replace(navigate("github"))}
+            >
+              <FaGithub className="contact-icon" />
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{
+              // y: -20,
+              opacity: 0,
+              scaleX: 0,
+              scaleY: 0,
+            }}
+            animate={{
+              // y: 0,
+              opacity: 100,
+              scaleX: 1,
+              scaleY: 1,
+            }}
+            transition={{
+              duration: 1.5,
+              type: "spring",
+            }}
           >
-            <MdMailOutline className="contact-icon" />
-          </div>
-          <div
-            className="contact-card wa"
-            onClick={() => window.location.replace(navigate("wa"))}
+            <div
+              className="contact-card gmail"
+              onClick={() => window.location.replace(navigate("gmail"))}
+            >
+              <MdMailOutline className="contact-icon" />
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{
+              // y: -20,
+              opacity: 0,
+              scaleX: 0,
+              scaleY: 0,
+            }}
+            animate={{
+              // y: 0,
+              opacity: 100,
+              scaleX: 1,
+              scaleY: 1,
+            }}
+            transition={{
+              duration: 2,
+              type: "spring",
+            }}
           >
-            <FaWhatsapp className="contact-icon" />
-          </div>
-          <div
-            className="contact-card dribble"
-            onClick={() => window.location.replace(navigate("dribble"))}
+            <div
+              className="contact-card wa"
+              onClick={() => window.location.replace(navigate("wa"))}
+            >
+              <FaWhatsapp className="contact-icon" />
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{
+              // y: -20,
+              opacity: 0,
+              scaleX: 0,
+              scaleY: 0,
+            }}
+            animate={{
+              // y: 0,
+              opacity: 100,
+              scaleX: 1,
+              scaleY: 1,
+            }}
+            transition={{
+              duration: 2.5,
+              type: "spring",
+            }}
           >
-            <FaDribbble className="contact-icon" />
-          </div>
-          <div
-            className="contact-card insta"
-            onClick={() => window.location.replace(navigate("insta"))}
+            <div
+              className="contact-card dribble"
+              onClick={() => window.location.replace(navigate("dribble"))}
+            >
+              <FaDribbble className="contact-icon" />
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{
+              // y: -20,
+              opacity: 0,
+              scaleX: 0,
+              scaleY: 0,
+            }}
+            animate={{
+              // y: 0,
+              opacity: 100,
+              scaleX: 1,
+              scaleY: 1,
+            }}
+            transition={{
+              duration: 3,
+              type: "spring",
+            }}
           >
-            <FaInstagram className="contact-icon" />
-          </div>{" "}
-          <div
-            className="contact-card fb"
-            onClick={() => window.location.replace(navigate("fb"))}
+            <div
+              className="contact-card insta"
+              onClick={() => window.location.replace(navigate("insta"))}
+            >
+              <FaInstagram className="contact-icon" />
+            </div>{" "}
+          </motion.div>
+          <motion.div
+            initial={{
+              // y: -20,
+              opacity: 0,
+              scaleX: 0,
+              scaleY: 0,
+            }}
+            animate={{
+              // y: 0,
+              opacity: 100,
+              scaleX: 1,
+              scaleY: 1,
+            }}
+            transition={{
+              duration: 3.5,
+              type: "spring",
+            }}
           >
-            <FaFacebook className="contact-icon" />
-          </div>
+            <div
+              className="contact-card fb"
+              onClick={() => window.location.replace(navigate("fb"))}
+            >
+              <FaFacebook className="contact-icon" />
+            </div>
+          </motion.div>
         </div>
       </div>
     </>

@@ -79,6 +79,7 @@ export default function project() {
                 theprojects.map((_data, key) => (
                     <ProjectCard
                       key={key}
+                      id={key}
                       name={_data.title}
                       desc={_data.desc}
                       link={_data.url}
