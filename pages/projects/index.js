@@ -7,10 +7,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function project() {
-  const [theprojects, settheprojects] = useState([]);
-  const [unaltered, setUnaltered] = useState([]);
-  const [isLoading, setLoading] = useState(true);
-  const [theprevtarget, setprevtarget] = useState(null);
+
   useEffect(() => {
     axios.get("https://projects-api-servlet.herokuapp.com/projects").then(res=>{
       settheprojects(res.data);
