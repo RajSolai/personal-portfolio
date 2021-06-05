@@ -52,7 +52,11 @@ button:hover {
   align-items: center;
 }
 .projects {
-  margin-left: 2rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .project-holder {
   padding: 0rem;

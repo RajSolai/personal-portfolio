@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Head from "next/head";
-import axios from "axios";
 import {
   FaReact,
   FaNodeJs,
@@ -21,34 +20,6 @@ import { MdMailOutline } from "react-icons/md";
 import { SiRedux } from "react-icons/si";
 
 export default function Home() {
-  const [theprojects, settheprojects] = useState([]);
-  const [unaltered, setUnaltered] = useState([]);
-  const [isLoading, setLoading] = useState(true);
-  const [theprevtarget, setprevtarget] = useState(null);
-  useEffect(() => {
-    axios
-      .get("https://projects-api-servlet.herokuapp.com/projects")
-      .then((res) => {
-        settheprojects(res.data);
-        setUnaltered(res.data);
-        setLoading(false);
-      });
-  }, []);
-  const changeCategory = (event) => {
-    if (theprevtarget) {
-      theprevtarget.className = "category-btn";
-    }
-    setprevtarget(event.target);
-    event.target.className += " category-btn-active";
-    if (event.target.id) {
-      const filteredData = unaltered.filter(
-        (_data) => _data.searchkey == event.target.id
-      );
-      settheprojects(filteredData);
-    } else {
-      settheprojects(unaltered);
-    }
-  };
   return (
     <>
       <Head>
@@ -79,6 +50,7 @@ export default function Home() {
           </div>
         </div>
         <div className="section profile">
+          <h1>About Me</h1>
           <div className="content">
             <p>
               Hey ! Am Solai Raj , Just a Student from SRM VALLIAIAMMAI
@@ -278,27 +250,7 @@ export default function Home() {
           </div>
         </div>
         <div className="section projects">
-          <div className="project-categories">
-            <button className="category-btn" onClick={changeCategory}>
-              All projects
-            </button>
-            <button
-              className="category-btn"
-              id="flutter"
-              onClick={changeCategory}
-            >
-              Flutter Apps
-            </button>
-            <button className="category-btn" id="gtk" onClick={changeCategory}>
-              GTK Apps
-            </button>
-            <button className="category-btn" id="apis" onClick={changeCategory}>
-              Backend APIs
-            </button>
-            <button className="category-btn" id="fweb" onClick={changeCategory}>
-              Web Apps
-            </button>
-          </div>
+          <h1>Projects Of Mine</h1>
           <div className="project-holder">
             {/* {isLoading ? (
               <p>Loading ...</p>
@@ -317,11 +269,23 @@ export default function Home() {
               ))
             )} */}
             <ProjectCard
-                  name={"_data.title"}
-                  desc={"_data.desc"}
-                  link={"_data.url"}
-                  lang={'_data.langs'}
-                />
+              name={"_data.title"}
+              desc={"_data.desc"}
+              link={"_data.url"}
+              lang={"_data.langs"}
+            />
+            <ProjectCard
+              name={"_data.title"}
+              desc={"_data.desc"}
+              link={"_data.url"}
+              lang={"_data.langs"}
+            />
+            <ProjectCard
+              name={"_data.title"}
+              desc={"_data.desc"}
+              link={"_data.url"}
+              lang={"_data.langs"}
+            />
           </div>
         </div>
       </div>
