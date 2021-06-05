@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Head from "next/head";
 import {
@@ -13,7 +12,6 @@ import {
   FaFacebook,
 } from "react-icons/fa";
 import ProjectCard from "./components/projectcard";
-import { useEffect, useState } from "react";
 import { RiFlutterLine } from "react-icons/ri";
 import { IoLogoIonic } from "react-icons/io";
 import { MdMailOutline } from "react-icons/md";
@@ -25,8 +23,16 @@ export default function Home() {
       <Head>
         <title>Solai Raj</title>
       </Head>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Profile</li>
+          <li>Projects</li>
+          <li>Resume</li>
+        </ul>
+      </nav>
       <div className="wrapper">
-        <div className="section home">
+        <div className="section home" id="home">
           <div className="greetbox">
             <div className="greettext">
               <p className="msg"> &nbsp;Hi , am</p>
@@ -36,10 +42,10 @@ export default function Home() {
                 IoT) , Linux Guy
               </span>
               <div className="btn-holder">
-                <Link href="/projects">
+                <Link href="#projects">
                   <button>View Projects</button>
                 </Link>
-                <Link href="/profile">
+                <Link href="#profile">
                   <button className="secondary-btn">View Profile</button>
                 </Link>
               </div>
@@ -49,7 +55,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="section profile">
+        <div className="section profile" id="profile">
           <h1>About Me</h1>
           <div className="content">
             <p>
@@ -97,177 +103,47 @@ export default function Home() {
             </span>
           </div>
           <div className="contacts">
-            <motion.div
-              initial={{
-                // y: -20,
-                opacity: 0,
-                scaleX: 0,
-                scaleY: 0,
-              }}
-              animate={{
-                // y: 0,
-                opacity: 100,
-                scaleX: 1,
-                scaleY: 1,
-              }}
-              transition={{
-                duration: 1,
-                type: "spring",
-              }}
+            <div
+              className="contact-card github"
+              onClick={() => window.location.replace(navigate("github"))}
             >
-              <div
-                className="contact-card github"
-                onClick={() => window.location.replace(navigate("github"))}
-              >
-                <FaGithub className="contact-icon" />
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{
-                // y: -20,
-                opacity: 0,
-                scaleX: 0,
-                scaleY: 0,
-              }}
-              animate={{
-                // y: 0,
-                opacity: 100,
-                scaleX: 1,
-                scaleY: 1,
-              }}
-              transition={{
-                duration: 1.5,
-                type: "spring",
-              }}
+              <FaGithub className="contact-icon" />
+            </div>
+            <div
+              className="contact-card gmail"
+              onClick={() => window.location.replace(navigate("gmail"))}
             >
-              <div
-                className="contact-card gmail"
-                onClick={() => window.location.replace(navigate("gmail"))}
-              >
-                <MdMailOutline className="contact-icon" />
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{
-                // y: -20,
-                opacity: 0,
-                scaleX: 0,
-                scaleY: 0,
-              }}
-              animate={{
-                // y: 0,
-                opacity: 100,
-                scaleX: 1,
-                scaleY: 1,
-              }}
-              transition={{
-                duration: 2,
-                type: "spring",
-              }}
+              <MdMailOutline className="contact-icon" />
+            </div>
+            <div
+              className="contact-card wa"
+              onClick={() => window.location.replace(navigate("wa"))}
             >
-              <div
-                className="contact-card wa"
-                onClick={() => window.location.replace(navigate("wa"))}
-              >
-                <FaWhatsapp className="contact-icon" />
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{
-                // y: -20,
-                opacity: 0,
-                scaleX: 0,
-                scaleY: 0,
-              }}
-              animate={{
-                // y: 0,
-                opacity: 100,
-                scaleX: 1,
-                scaleY: 1,
-              }}
-              transition={{
-                duration: 2.5,
-                type: "spring",
-              }}
+              <FaWhatsapp className="contact-icon" />
+            </div>
+            <div
+              className="contact-card dribble"
+              onClick={() => window.location.replace(navigate("dribble"))}
             >
-              <div
-                className="contact-card dribble"
-                onClick={() => window.location.replace(navigate("dribble"))}
-              >
-                <FaDribbble className="contact-icon" />
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{
-                // y: -20,
-                opacity: 0,
-                scaleX: 0,
-                scaleY: 0,
-              }}
-              animate={{
-                // y: 0,
-                opacity: 100,
-                scaleX: 1,
-                scaleY: 1,
-              }}
-              transition={{
-                duration: 3,
-                type: "spring",
-              }}
+              <FaDribbble className="contact-icon" />
+            </div>
+            <div
+              className="contact-card insta"
+              onClick={() => window.location.replace(navigate("insta"))}
             >
-              <div
-                className="contact-card insta"
-                onClick={() => window.location.replace(navigate("insta"))}
-              >
-                <FaInstagram className="contact-icon" />
-              </div>{" "}
-            </motion.div>
-            <motion.div
-              initial={{
-                // y: -20,
-                opacity: 0,
-                scaleX: 0,
-                scaleY: 0,
-              }}
-              animate={{
-                // y: 0,
-                opacity: 100,
-                scaleX: 1,
-                scaleY: 1,
-              }}
-              transition={{
-                duration: 3.5,
-                type: "spring",
-              }}
+              <FaInstagram className="contact-icon" />
+            </div>{" "}
+            <div
+              className="contact-card fb"
+              onClick={() => window.location.replace(navigate("fb"))}
             >
-              <div
-                className="contact-card fb"
-                onClick={() => window.location.replace(navigate("fb"))}
-              >
-                <FaFacebook className="contact-icon" />
-              </div>
-            </motion.div>
+              <FaFacebook className="contact-icon" />
+            </div>
           </div>
         </div>
-        <div className="section projects">
+        <div className="section projects" id="projects">
           <h1>Projects Of Mine</h1>
           <div className="project-holder">
-            {/* {isLoading ? (
-              <p>Loading ...</p>
-            ) : theprojects.length == 0 ? (
-              <p>Oops, Nothing Found here !</p>
-            ) : (
-              theprojects.map((_data, key) => (
-                <ProjectCard
-                  key={key}
-                  id={key}
-                  name={_data.title}
-                  desc={_data.desc}
-                  link={_data.url}
-                  lang={_data.langs}
-                />
-              ))
-            )} */}
             <ProjectCard
               name={"_data.title"}
               desc={"_data.desc"}

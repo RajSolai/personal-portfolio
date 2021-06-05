@@ -6,9 +6,8 @@ export default function ProjectCard(props) {
       <div className="project-card">
         <img
           src="https://core0.staticworld.net/images/article/2017/02/8-most-useful-android-app-shortcuts-phone-new-contact-app-shortcut_7-100709786-orig.jpg"
-          width="300px"
           className="project-card-image"
-          alt=""
+          alt={props.name}
         />
         <div className="project-card-content">
           <h3>{props.name}</h3>

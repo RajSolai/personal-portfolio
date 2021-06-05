@@ -6,6 +6,12 @@
   --brown: #53372d;
   color: var(--brown);
 }
+nav>ul{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around;
+}
 .wrapper{
   display: flex;
   flex-direction: column;
@@ -42,33 +48,26 @@ button:hover {
   align-items: center;
 }
 .section{
-  height: calc(100vh - 10px);
+  height: calc(100vh - 70px);
 }
 .profile {
-  margin: 1rem;
+  margin: .3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .projects {
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.project-holder {
-  padding: 0rem;
-  margin-left: 1rem;
+  margin: 0px;
+  /* text-align: center; */
 }
 .project-card {
-  margin: 1rem 0 0 0;
-  /* width: 320px !important; */
+  margin-bottom: 1rem;
 }
 .home {
-  /* margin-top: 12rem; */
+  /* margin-top: -5rem; */
   display: flex;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
 }
@@ -77,6 +76,7 @@ button:hover {
 }
 .greetimg {
   display: none;
+  height: 0px;
 }
 .name {
   font-size: 48px;
@@ -120,7 +120,7 @@ button:hover {
   color: #498aff;
 }
 .contacts {
-  display: flex;
+  display: none;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -173,6 +173,7 @@ button:hover {
 }
 .project-card-image{
   border-radius: 8px 8px 0px 0px;
+  width: calc(100vw - 1.75rem);
 }
 
 @media only screen and (min-width: 700px) {
