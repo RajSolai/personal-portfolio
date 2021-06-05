@@ -6,13 +6,13 @@
   --brown: #53372d;
   color: var(--brown);
 }
-nav>ul{
+nav > ul {
   display: flex;
   list-style: none;
   align-items: center;
   justify-content: space-around;
 }
-.wrapper{
+.wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,14 +44,15 @@ button:hover {
   cursor: hand;
 }
 .greetbox {
+  display: flex;
   flex-direction: column-reverse;
   align-items: center;
 }
-.section{
+.section {
   height: calc(100vh - 70px);
 }
 .profile {
-  margin: .3rem;
+  margin: 0.3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,7 +68,7 @@ button:hover {
 .home {
   /* margin-top: -5rem; */
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -75,8 +76,14 @@ button:hover {
   margin: 0;
 }
 .greetimg {
-  display: none;
-  height: 0px;
+  display: flex;
+  justify-content: center;
+  margin-left: 5rem;
+  background: var(--green);
+  border-radius: 200px;
+  height: 220px;
+  width: 220px;
+  box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.25);
 }
 .name {
   font-size: 48px;
@@ -168,10 +175,10 @@ button:hover {
   border-radius: 8px;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
 }
-.project-card-content{
-  padding: .5rem;
+.project-card-content {
+  padding: 0.5rem;
 }
-.project-card-image{
+.project-card-image {
   border-radius: 8px 8px 0px 0px;
   width: calc(100vw - 1.75rem);
 }
