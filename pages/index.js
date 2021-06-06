@@ -22,6 +22,11 @@ export default function Home() {
     <>
       <Head>
         <title>Solai Raj</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com"></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+          rel="stylesheet"
+        ></link>{" "}
       </Head>
       <nav>
         <ul>
@@ -67,7 +72,7 @@ export default function Home() {
               work on projects , Freelance Web and <wbr /> Mobile Application
               Developer, Love to Constantly Update myself on every new Projects,
               <wbr /> Guys, I can even Speak Japanese a little ,
-              こにちわおれわーともだち UwU
+              こにちわおれわーともだち
               <wbr />
               below are some skills of mine.
             </p>
@@ -102,6 +107,8 @@ export default function Home() {
               Ionic
             </span>
           </div>
+        </div>
+        <div className="section contact" id="contact">
           <div className="contacts">
             <div
               className="contact-card github"
