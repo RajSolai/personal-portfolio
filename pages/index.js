@@ -18,6 +18,42 @@ import { MdMailOutline } from "react-icons/md";
 import { SiRedux } from "react-icons/si";
 
 export default function Home() {
+  const navigate = (domain) => {
+    let temp = "";
+    switch (domain) {
+      case "projects":
+        window.location = "#projects"
+        break;
+      case "profile":
+        window.location = "#profile"
+      break;
+      case "home":
+        window.location = "#start"
+      break;
+      case "github":
+        temp = "https://github.com/RajSolai";
+        break;
+      case "gmail":
+        temp = "mailto:msraj085@gmail.com";
+        break;
+      case "wa":
+        temp =
+          "https://wa.me/918428732579?text=Hey Contact from your solairaj.rocks";
+        break;
+      case "insta":
+        temp = "https://www.instagram.com/raj.solai085/";
+        break;
+      case "insta":
+        temp = "https://https://dribbble.com/msraj085";
+        break;
+      case "fb":
+        temp = "https://www.facebook.com/msraj.085/";
+        break;
+      default:
+        temp = "./projects";
+        break;
+    }
+  };
   return (
     <>
       <Head>
@@ -26,13 +62,13 @@ export default function Home() {
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
           rel="stylesheet"
-        ></link>{" "}
+        ></link>
       </Head>
       <nav>
         <ul>
-          <li>Home</li>
-          <li>Profile</li>
-          <li>Projects</li>
+          <li onClick={() => navigate("home")}>Home</li>
+          <li onClick={() => navigate("profile")}>Profile</li>
+          <li onClick={() => navigate("projects")}>Projects</li>
           <li>Resume</li>
         </ul>
       </nav>
@@ -65,7 +101,7 @@ export default function Home() {
           <div className="content">
             <p>
               Hey ! Am Solai Raj , Just a Student from SRM VALLIAIAMMAI
-              ENGINEERING COLLEGE ,<wbr /> Chennai Persuing my Under Graduate
+              ENGINEERING COLLEGE ,<wbr /> Chennai Perusing my Under Graduate
               Engineering Degree in{" "}
               <strong>Computer Science and Engineering</strong> ,
               <wbr /> Am a great fan of computers and a quick learner , eager to
@@ -73,11 +109,12 @@ export default function Home() {
               Developer, Love to Constantly Update myself on every new Projects,
               <wbr /> Guys, I can even Speak Japanese a little ,
               こにちわおれわーともだち
-              <wbr />
-              below are some skills of mine.
             </p>
             <p>
-              TODO: add skill strengths and weaks
+              Obviously as am a student I love to explore new concepts in
+              computer science, Starting my journey with Action Script Flash
+              Games. <wbr /> I learn new things and concepts quicker which is
+              one of my Strengths. <wbr />
             </p>
           </div>
           <div className="skills">
