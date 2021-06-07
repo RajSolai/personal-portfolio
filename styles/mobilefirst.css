@@ -79,7 +79,7 @@ button:hover {
   height: calc(100vh - 70px);
 }
 .profile {
-  margin: 0.3rem;
+  margin: 1rem;
   /* display: flex;
   flex-direction: column;
   justify-content: center;
@@ -166,6 +166,7 @@ button:hover {
   background: #ffffff;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
+  cursor: pointer;
 }
 .contact-icon {
   height: 3rem;

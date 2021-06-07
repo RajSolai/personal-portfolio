@@ -53,6 +53,7 @@ export default function Home() {
         temp = "./projects";
         break;
     }
+	return temp;
   };
   return (
     <>
@@ -72,8 +73,8 @@ export default function Home() {
           <li>Resume</li>
         </ul>
       </nav>
-      <div className="wrapper">
-        <div className="section home" id="home">
+      <main className="wrapper">
+        <section className="section home" id="home">
           <div className="greetbox">
             <div className="greettext">
               <p className="msg"> &nbsp;Hi , am</p>
@@ -96,9 +97,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="section profile" id="profile">
+        <section className="section profile" id="profile">
           <h1>About Me</h1>
-          <div className="content">
+          <article className="content">
             <p>
               Hey ! Am Solai Raj , Just a Student from SRM VALLIAIAMMAI
               ENGINEERING COLLEGE ,<wbr /> Chennai Perusing my Under Graduate
@@ -112,8 +113,9 @@ export default function Home() {
             </p>
             <p>
               Obviously as am a student I love to explore new concepts in
-              computer science, Starting my journey with Action Script Flash
-              Games. <wbr /> I learn new things and concepts quicker which is
+              computer science, Starting my journey with <strong>Action Script Flash
+              Games</strong> to <strong>Tensorflow</strong>. 
+	      <wbr /> I learn new things and concepts quicker which is
               one of my Strengths. <wbr />
             </p>
           </div>
@@ -186,7 +188,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="section projects" id="projects">
+        <section className="section projects" id="projects">
           <h1>Projects Of Mine</h1>
           <div className="project-holder">
             <ProjectCard
