@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
+import Fade from "react-reveal/Fade";
 import {
   FaReact,
   FaNodeJs,
@@ -17,19 +18,19 @@ import { IoLogoIonic } from "react-icons/io";
 import { MdMailOutline } from "react-icons/md";
 import { SiRedux } from "react-icons/si";
 
-export default function Home() {
-  const navigate = (domain) => {
+const Home: React.FC<any> = () => {
+  const navigate = (domain: string) => {
     let temp = "";
     switch (domain) {
       case "projects":
-        window.location = "#projects"
+        window.location.href = "#projects";
         break;
       case "profile":
-        window.location = "#profile"
-      break;
+        window.location.href = "#profile";
+        break;
       case "home":
-        window.location = "#start"
-      break;
+        window.location.href = "#start";
+        break;
       case "github":
         temp = "https://github.com/RajSolai";
         break;
@@ -53,7 +54,7 @@ export default function Home() {
         temp = "./projects";
         break;
     }
-	return temp;
+    return temp;
   };
   return (
     <>
@@ -93,32 +94,40 @@ export default function Home() {
               </div>
             </div>
             <div className="greetimg">
-              <img src="/mine.png" className="greetimg-img" alt="" />
+              <img
+                src="/mine.png"
+                className="greetimg-img"
+                alt="Solai Raj's Image"
+              />
             </div>
           </div>
-        </div>
+        </section>
         <section className="section profile" id="profile">
           <h1>About Me</h1>
-          <article className="content">
-            <p>
-              Hey ! Am Solai Raj , Just a Student from SRM VALLIAIAMMAI
-              ENGINEERING COLLEGE ,<wbr /> Chennai Perusing my Under Graduate
-              Engineering Degree in{" "}
-              <strong>Computer Science and Engineering</strong> ,
-              <wbr /> Am a great fan of computers and a quick learner , eager to
-              work on projects , Freelance Web and <wbr /> Mobile Application
-              Developer, Love to Constantly Update myself on every new Projects,
-              <wbr /> Guys, I can even Speak Japanese a little ,
-              こにちわおれわーともだち
-            </p>
-            <p>
-              Obviously as am a student I love to explore new concepts in
-              computer science, Starting my journey with <strong>Action Script Flash
-              Games</strong> to <strong>Tensorflow</strong>. 
-	      <wbr /> I learn new things and concepts quicker which is
-              one of my Strengths. <wbr />
-            </p>
-          </div>
+          <Fade top>
+            <article className="content">
+              <p>
+                Hey ! Am Solai Raj , Just a Student from SRM VALLIAIAMMAI
+                ENGINEERING COLLEGE ,<wbr /> Chennai Perusing my Under Graduate
+                Engineering Degree in{" "}
+                <strong>Computer Science and Engineering</strong> ,
+                <wbr /> Am a great fan of computers and a quick learner , eager
+                to work on projects , Freelance Web and <wbr /> Mobile
+                Application Developer, Love to Constantly Update myself on every
+                new Projects,
+                <wbr /> Guys, I can even Speak Japanese a little ,
+                こにちわおれわーともだち
+              </p>
+              <p>
+                Obviously as am a student I love to explore new concepts in
+                computer science, Starting my journey with{" "}
+                <strong>Action Script Flash Games</strong> to{" "}
+                <strong>Tensorflow</strong>.
+                <wbr /> I learn new things and concepts quicker which is one of
+                my Strengths. <wbr />
+              </p>
+            </article>
+          </Fade>
           <div className="skills">
             <span className="skillbox react">
               <FaReact />
@@ -149,69 +158,76 @@ export default function Home() {
               Ionic
             </span>
           </div>
-          <div className="contacts">
-            <div
-              className="contact-card github"
-              onClick={() => window.location.replace(navigate("github"))}
-            >
-              <FaGithub className="contact-icon" />
+          <Fade top cascade>
+            <div className="contacts">
+              <div
+                className="contact-card github"
+                onClick={() => window.location.replace(navigate("github"))}
+              >
+                <FaGithub className="contact-icon" />
+              </div>
+              <div
+                className="contact-card gmail"
+                onClick={() => window.location.replace(navigate("gmail"))}
+              >
+                <MdMailOutline className="contact-icon" />
+              </div>
+              <div
+                className="contact-card wa"
+                onClick={() => window.location.replace(navigate("wa"))}
+              >
+                <FaWhatsapp className="contact-icon" />
+              </div>
+              <div
+                className="contact-card dribble"
+                onClick={() => window.location.replace(navigate("dribble"))}
+              >
+                <FaDribbble className="contact-icon" />
+              </div>
+              <div
+                className="contact-card insta"
+                onClick={() => window.location.replace(navigate("insta"))}
+              >
+                <FaInstagram className="contact-icon" />
+              </div>{" "}
+              <div
+                className="contact-card fb"
+                onClick={() => window.location.replace(navigate("fb"))}
+              >
+                <FaFacebook className="contact-icon" />
+              </div>
             </div>
-            <div
-              className="contact-card gmail"
-              onClick={() => window.location.replace(navigate("gmail"))}
-            >
-              <MdMailOutline className="contact-icon" />
-            </div>
-            <div
-              className="contact-card wa"
-              onClick={() => window.location.replace(navigate("wa"))}
-            >
-              <FaWhatsapp className="contact-icon" />
-            </div>
-            <div
-              className="contact-card dribble"
-              onClick={() => window.location.replace(navigate("dribble"))}
-            >
-              <FaDribbble className="contact-icon" />
-            </div>
-            <div
-              className="contact-card insta"
-              onClick={() => window.location.replace(navigate("insta"))}
-            >
-              <FaInstagram className="contact-icon" />
-            </div>{" "}
-            <div
-              className="contact-card fb"
-              onClick={() => window.location.replace(navigate("fb"))}
-            >
-              <FaFacebook className="contact-icon" />
-            </div>
-          </div>
-        </div>
+          </Fade>
+        </section>
         <section className="section projects" id="projects">
           <h1>Projects Of Mine</h1>
           <div className="project-holder">
             <ProjectCard
-              name={"_data.title"}
+              id={1}
+              title={"_data.title"}
               desc={"_data.desc"}
-              link={"_data.url"}
-              lang={"_data.langs"}
+              repoLink={"_data.url"}
+              langs={"_data.langs"}
             />
             <ProjectCard
-              name={"_data.title"}
+              id={1}
+              title={"_data.title"}
               desc={"_data.desc"}
-              link={"_data.url"}
-              lang={"_data.langs"}
+              repoLink={"_data.url"}
+              langs={"_data.langs"}
             />
             <ProjectCard
-              name={"_data.title"}
+              id={1}
+              title={"_data.title"}
               desc={"_data.desc"}
-              link={"_data.url"}
-              lang={"_data.langs"}
+              repoLink={"_data.url"}
+              langs={"_data.langs"}
             />
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     </>
   );
-}
+};
+
+export default Home;
