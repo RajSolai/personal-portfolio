@@ -76,6 +76,9 @@ export default function Home() {
               <wbr />
               below are some skills of mine.
             </p>
+            <p>
+              TODO: add skill strengths and weaks
+            </p>
           </div>
           <div className="skills">
             <span className="skillbox react">
@@ -107,8 +110,6 @@ export default function Home() {
               Ionic
             </span>
           </div>
-        </div>
-        <div className="section contact" id="contact">
           <div className="contacts">
             <div
               className="contact-card github"

@@ -55,10 +55,10 @@ button:hover {
 }
 .profile {
   margin: 0.3rem;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 .projects {
   margin: 0px;
@@ -126,7 +126,7 @@ button:hover {
   color: #498aff;
 }
 .contacts {
-  display: inline-flex;
+  display: none;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
