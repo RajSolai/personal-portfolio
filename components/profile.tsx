@@ -15,43 +15,6 @@ import { MdMailOutline } from "react-icons/md";
 import { SiRedux } from "react-icons/si";
 
 const Profile: React.FC<any> = () => {
-  const navigate = (domain: string) => {
-    let temp = "";
-    switch (domain) {
-      case "projects":
-        window.location.href = "#projects";
-        break;
-      case "profile":
-        window.location.href = "#profile";
-        break;
-      case "home":
-        window.location.href = "#start";
-        break;
-      case "github":
-        temp = "https://github.com/RajSolai";
-        break;
-      case "gmail":
-        temp = "mailto:msraj085@gmail.com";
-        break;
-      case "wa":
-        temp =
-          "https://wa.me/918428732579?text=Hey Contact from your solairaj.rocks";
-        break;
-      case "insta":
-        temp = "https://www.instagram.com/raj.solai085/";
-        break;
-      case "insta":
-        temp = "https://https://dribbble.com/msraj085";
-        break;
-      case "fb":
-        temp = "https://www.facebook.com/msraj.085/";
-        break;
-      default:
-        temp = "./projects";
-        break;
-    }
-    return temp;
-  };
   return (
     <>
       <section className="section profile" id="profile">
@@ -108,41 +71,36 @@ const Profile: React.FC<any> = () => {
           </span>
         </div>
         <div className="contacts">
-          <a href="">
+          <a href="https://github.com/RajSolai">
             <div className="contact-card github">
               <FaGithub className="contact-icon" />
             </div>
           </a>
-          <div
-            className="contact-card gmail"
-            onClick={() => window.location.replace(navigate("gmail"))}
-          >
-            <MdMailOutline className="contact-icon" />
-          </div>
-          <div
-            className="contact-card wa"
-            onClick={() => window.location.replace(navigate("wa"))}
-          >
-            <FaWhatsapp className="contact-icon" />
-          </div>
-          <div
-            className="contact-card dribble"
-            onClick={() => window.location.replace(navigate("dribble"))}
-          >
-            <FaDribbble className="contact-icon" />
-          </div>
-          <div
-            className="contact-card insta"
-            onClick={() => window.location.replace(navigate("insta"))}
-          >
-            <FaInstagram className="contact-icon" />
-          </div>{" "}
-          <div
-            className="contact-card fb"
-            onClick={() => window.location.replace(navigate("fb"))}
-          >
-            <FaFacebook className="contact-icon" />
-          </div>
+          <a href="mailto:msraj085@gmail.com">
+            <div className="contact-card gmail">
+              <MdMailOutline className="contact-icon" />
+            </div>
+          </a>
+          <a href="https://wa.me/918428732579?text=Hey Contact from your Web Profile">
+            <div className="contact-card wa">
+              <FaWhatsapp className="contact-icon" />
+            </div>
+          </a>
+          <a href="https://https://dribbble.com/msraj085">
+            <div className="contact-card dribble">
+              <FaDribbble className="contact-icon" />
+            </div>
+          </a>
+          <a href="https://www.instagram.com/raj.solai085/">
+            <div className="contact-card insta">
+              <FaInstagram className="contact-icon" />
+            </div>
+          </a>
+          <a href="https://www.facebook.com/msraj.085/">
+            <div className="contact-card fb">
+              <FaFacebook className="contact-icon" />
+            </div>
+          </a>
         </div>
       </section>
     </>

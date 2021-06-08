@@ -1,9 +1,7 @@
 import Head from "next/head";
-import dynamic from "next/dynamic";
-
-const Greeter = dynamic(() => import("./components/greeter"));
-const Profile = dynamic(() => import("./components/profile"));
-const Projects = dynamic(() => import("./components/projects"));
+import Greeter from "../components/greeter";
+import Profile from "../components/profile";
+import Projects from "../components/projects";
 
 export const config = {
   unstable_runtimeJS: false,
