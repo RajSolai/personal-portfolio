@@ -1,4 +1,3 @@
-import Fade from "react-reveal/Fade";
 import {
   FaReact,
   FaNodeJs,
@@ -57,29 +56,27 @@ const Profile: React.FC<any> = () => {
     <>
       <section className="section profile" id="profile">
         <h1>About Me</h1>
-        <Fade top>
-          <article className="content">
-            <p>
-              Hey ! Am Solai Raj , Just a Student from SRM VALLIAIAMMAI
-              ENGINEERING COLLEGE ,<wbr /> Chennai Perusing my Under Graduate
-              Engineering Degree in{" "}
-              <strong>Computer Science and Engineering</strong> ,
-              <wbr /> Am a great fan of computers and a quick learner , eager to
-              work on projects , Freelance Web and <wbr /> Mobile Application
-              Developer, Love to Constantly Update myself on every new Projects,
-              <wbr /> Guys, I can even Speak Japanese a little ,
-              こにちわおれわーともだち
-            </p>
-            <p>
-              Obviously as am a student I love to explore new concepts in
-              computer science, Starting my journey with{" "}
-              <strong>Action Script Flash Games</strong> to{" "}
-              <strong>Tensorflow</strong>.
-              <wbr /> I learn new things and concepts quicker which is one of my
-              Strengths. <wbr />
-            </p>
-          </article>
-        </Fade>
+        <article className="content animate__animated animate__fadeInDown">
+          <p>
+            Hey ! Am Solai Raj , Just a Student from SRM VALLIAIAMMAI
+            ENGINEERING COLLEGE ,<wbr /> Chennai Perusing my Under Graduate
+            Engineering Degree in{" "}
+            <strong>Computer Science and Engineering</strong> ,
+            <wbr /> Am a great fan of computers and a quick learner , eager to
+            work on projects , Freelance Web and <wbr /> Mobile Application
+            Developer, Love to Constantly Update myself on every new Projects,
+            <wbr /> Guys, I can even Speak Japanese a little ,
+            こにちわおれわーともだち
+          </p>
+          <p>
+            Obviously as am a student I love to explore new concepts in computer
+            science, Starting my journey with{" "}
+            <strong>Action Script Flash Games</strong> to{" "}
+            <strong>Tensorflow</strong>.
+            <wbr /> I learn new things and concepts quicker which is one of my
+            Strengths. <wbr />
+          </p>
+        </article>
         <div className="skills">
           <span className="skillbox react">
             <FaReact />
@@ -110,46 +107,44 @@ const Profile: React.FC<any> = () => {
             Ionic
           </span>
         </div>
-        <Fade top cascade>
-          <div className="contacts">
-            <div
-              className="contact-card github"
-              onClick={() => window.location.replace(navigate("github"))}
-            >
-              <FaGithub className="contact-icon" />
-            </div>
-            <div
-              className="contact-card gmail"
-              onClick={() => window.location.replace(navigate("gmail"))}
-            >
-              <MdMailOutline className="contact-icon" />
-            </div>
-            <div
-              className="contact-card wa"
-              onClick={() => window.location.replace(navigate("wa"))}
-            >
-              <FaWhatsapp className="contact-icon" />
-            </div>
-            <div
-              className="contact-card dribble"
-              onClick={() => window.location.replace(navigate("dribble"))}
-            >
-              <FaDribbble className="contact-icon" />
-            </div>
-            <div
-              className="contact-card insta"
-              onClick={() => window.location.replace(navigate("insta"))}
-            >
-              <FaInstagram className="contact-icon" />
-            </div>{" "}
-            <div
-              className="contact-card fb"
-              onClick={() => window.location.replace(navigate("fb"))}
-            >
-              <FaFacebook className="contact-icon" />
-            </div>
+        <div className="contacts">
+          <div
+            className="contact-card github"
+            onClick={() => window.location.replace(navigate("github"))}
+          >
+            <FaGithub className="contact-icon" />
           </div>
-        </Fade>
+          <div
+            className="contact-card gmail"
+            onClick={() => window.location.replace(navigate("gmail"))}
+          >
+            <MdMailOutline className="contact-icon" />
+          </div>
+          <div
+            className="contact-card wa"
+            onClick={() => window.location.replace(navigate("wa"))}
+          >
+            <FaWhatsapp className="contact-icon" />
+          </div>
+          <div
+            className="contact-card dribble"
+            onClick={() => window.location.replace(navigate("dribble"))}
+          >
+            <FaDribbble className="contact-icon" />
+          </div>
+          <div
+            className="contact-card insta"
+            onClick={() => window.location.replace(navigate("insta"))}
+          >
+            <FaInstagram className="contact-icon" />
+          </div>{" "}
+          <div
+            className="contact-card fb"
+            onClick={() => window.location.replace(navigate("fb"))}
+          >
+            <FaFacebook className="contact-icon" />
+          </div>
+        </div>
       </section>
     </>
   );

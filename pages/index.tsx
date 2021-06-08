@@ -1,9 +1,17 @@
+import { FaHome, FaUser } from "react-icons/fa";
+import { IoMdDocument } from "react-icons/io";
+import { FiPackage } from "react-icons/fi";
+
 import Head from "next/head";
 import dynamic from "next/dynamic";
 
 const Greeter = dynamic(() => import("./components/greeter"));
 const Profile = dynamic(() => import("./components/profile"));
 const Projects = dynamic(() => import("./components/projects"));
+
+export const config = {
+  unstable_runtimeJS: false,
+};
 
 const Home: React.FC<any> = () => {
   return (
@@ -14,12 +22,30 @@ const Home: React.FC<any> = () => {
       <header>
         <nav>
           <ul>
-            <li onClick={() => (window.location.href = "#")}>Home</li>
-            <li onClick={() => (window.location.href = "#profile")}>Profile</li>
-            <li onClick={() => (window.location.href = "#projects")}>
-              Projects
+            <li>
+              <a href="">
+                <FaHome />
+                &nbsp;Home
+              </a>
             </li>
-            <li>Resume</li>
+            <li>
+              <a href="#profile">
+                <FaUser />
+                &nbsp;Profile
+              </a>
+            </li>
+            <li>
+              <a href="#projects">
+                <FiPackage />
+                &nbsp;Projects
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <IoMdDocument />
+                &nbsp;Resume
+              </a>
+            </li>
           </ul>
         </nav>
       </header>
@@ -28,9 +54,7 @@ const Home: React.FC<any> = () => {
         <Profile />
         <Projects />
       </main>
-      <footer className="footer">
-        Thanks for visiting my profile.
-      </footer>
+      <footer className="footer">Thanks for visiting my profile.</footer>
     </>
   );
 };

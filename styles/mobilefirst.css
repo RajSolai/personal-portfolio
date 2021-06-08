@@ -36,8 +36,15 @@ nav > ul > li {
   cursor: pointer;
 }
 nav > ul > li:hover {
-  background-color: var(--brown);
-  color: #fafafa;
+  box-shadow: 2px 1px 8px rgba(0, 0, 0, 0.25);
+}
+nav > ul > li > a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brown);
+  font-weight: 600;
+  text-decoration: none;
 }
 .wrapper {
   display: flex;

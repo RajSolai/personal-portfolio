@@ -4,7 +4,7 @@ const Greeter: React.FC<any> = () => {
   return (
     <>
       <section className="section home" id="home">
-        <div className="greetbox">
+        <div className="greetbox animate__animated animate__fadeInDown">
           <div className="greettext">
             <p className="msg"> &nbsp;Hi , am</p>
             <p className="name">Solai Raj</p>
@@ -13,12 +13,12 @@ const Greeter: React.FC<any> = () => {
               , Linux Guy
             </span>
             <div className="btn-holder">
-              <Link href="#projects">
+              <a href="#projects">
                 <button>View Projects</button>
-              </Link>
-              <Link href="#profile">
+              </a>
+              <a href="#profile">
                 <button className="secondary-btn">View Profile</button>
-              </Link>
+              </a>
             </div>
           </div>
           <div className="greetimg">
