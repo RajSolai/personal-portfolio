@@ -11,19 +11,26 @@ const Home: React.FC<any> = () => {
       <Head>
         <title>RajSolai - Developer</title>
       </Head>
-      <nav>
-        <ul>
-          <li onClick={() => (window.location.href = "#")}>Home</li>
-          <li onClick={() => (window.location.href = "#profile")}>Profile</li>
-          <li onClick={() => (window.location.href = "#projects")}>Projects</li>
-          <li>Resume</li>
-        </ul>
-      </nav>
+      <header>
+        <nav>
+          <ul>
+            <li onClick={() => (window.location.href = "#")}>Home</li>
+            <li onClick={() => (window.location.href = "#profile")}>Profile</li>
+            <li onClick={() => (window.location.href = "#projects")}>
+              Projects
+            </li>
+            <li>Resume</li>
+          </ul>
+        </nav>
+      </header>
       <main className="wrapper">
         <Greeter />
         <Profile />
         <Projects />
       </main>
+      <footer className="footer">
+        Thanks for visiting my profile.
+      </footer>
     </>
   );
 };

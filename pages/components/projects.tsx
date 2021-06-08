@@ -15,14 +15,14 @@ const Projects: React.FC = () => {
           langs={"_data.langs"}
         />
         <ProjectCard
-          id={1}
+          id={2}
           title={"_data.title"}
           desc={"_data.desc"}
           repoLink={"_data.url"}
           langs={"_data.langs"}
         />
         <ProjectCard
-          id={1}
+          id={3}
           title={"_data.title"}
           desc={"_data.desc"}
           repoLink={"_data.url"}
