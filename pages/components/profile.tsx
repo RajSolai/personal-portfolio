@@ -108,12 +108,11 @@ const Profile: React.FC<any> = () => {
           </span>
         </div>
         <div className="contacts">
-          <div
-            className="contact-card github"
-            onClick={() => window.location.replace(navigate("github"))}
-          >
-            <FaGithub className="contact-icon" />
-          </div>
+          <a href="">
+            <div className="contact-card github">
+              <FaGithub className="contact-icon" />
+            </div>
+          </a>
           <div
             className="contact-card gmail"
             onClick={() => window.location.replace(navigate("gmail"))}

@@ -1,3 +1,7 @@
+import { FaHome, FaUser } from "react-icons/fa";
+import { IoMdDocument } from "react-icons/io";
+import { FiPackage } from "react-icons/fi";
+
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
@@ -14,6 +18,10 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
           />
+          <meta
+            name="keywords"
+            content="Solai,solai,RajSolai,Solai,Raj,SolaiRaj,Solai Raj,Developer,Web Developer,RajSolai - Developer"
+          ></meta>
           <meta
             name="description"
             content="This is meta description Sample. We can add up to 158."
@@ -41,8 +49,40 @@ class MyDocument extends Document {
           <meta name="twitter:site" content="@RajSolai2" />
           <meta name="twitter:creator" content="@RajSolai2" />
         </Head>
+        <header>
+          <nav>
+            <ul>
+              <li>
+                <a href="#home">
+                  <FaHome />
+                  &nbsp;Home
+                </a>
+              </li>
+              <li>
+                <a href="#profile">
+                  <FaUser />
+                  &nbsp;Profile
+                </a>
+              </li>
+              <li>
+                <a href="#projects">
+                  <FiPackage />
+                  &nbsp;Projects
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/RajSolai/personal-portfolio">
+                  <IoMdDocument />
+                  &nbsp;Resume
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
         <body>
-          <Main />
+          <main>
+            <Main />
+          </main>
           <NextScript />
         </body>
       </Html>
