@@ -1,7 +1,7 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
 import { FaGithub } from "react-icons/fa";
-import { Project } from "../../interfaces/project";
+import { Project } from "../interfaces/project";
 
 const ProjectCard: React.FC<any> = (props: Project) => {
   return (
