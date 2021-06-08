@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com"></link>
           <link
@@ -32,7 +32,7 @@ class MyDocument extends Document {
             content="Student , Web ,Mobile Developer IoT and AI enthusiast
             IoT, Linux Guy"
           />
-          {/* TODO: add iamge for twitter card */}
+          {/* TODO: add image for twitter card */}
           <meta name="twitter:image" content="LINK TO IMAGE" />
           <meta name="twitter:site" content="@RajSolai2" />
           <meta name="twitter:creator" content="@RajSolai2" />
