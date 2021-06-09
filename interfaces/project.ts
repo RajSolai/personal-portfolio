@@ -3,5 +3,6 @@ export interface Project{
     title:string,
     desc: string,
     langs: string,
+    img: string,
     repoLink: string
 }
