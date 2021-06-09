@@ -17,7 +17,7 @@ const ProjectCard: React.FC<any> = (props: Project) => {
           <p>{props.desc}</p>
           <p>{props.langs}</p>
           <a href={props.repoLink} className="link">
-          👉️&nbsp;Visit Website
+            👉️&nbsp;Visit Website
           </a>
         </div>
       </div>
