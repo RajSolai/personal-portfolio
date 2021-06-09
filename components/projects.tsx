@@ -13,7 +13,7 @@ const Projects: React.FC = () => {
           }
           title={"SRM VEC YRC Website"}
           desc={"Official YRC website for SRM Valliammai Engineering College."}
-          repoLink={"https://github.com/RajSolai/yrcwebsite"}
+          repoLink={"https://srmvecyrc.web.app/"}
           langs={"React JS, Firebase, MongoDB"}
         />
         <ProjectCard
@@ -40,7 +40,7 @@ const Projects: React.FC = () => {
           }
           title={"Response"}
           desc={"App to Test your web page's Responsiveness in Linux Desktop."}
-          repoLink={"https://github.com/RajSolai/Response"}
+          repoLink={"https://flathub.org/apps/details/com.github.rajsolai.response"}
           langs={"Gtk , Vala"}
         />
       </div>
